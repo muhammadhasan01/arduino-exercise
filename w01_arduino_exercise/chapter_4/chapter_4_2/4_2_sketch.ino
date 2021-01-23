@@ -35,7 +35,7 @@ void loop() {
     value -= 400;
   }
   for (int i = 0; i < 6; i++) {
-    tone(HAPPY_BIRTHDAY[i][0] % value, value, HAPPY_BIRTHDAY[0][1]);
+    tone(HAPPY_BIRTHDAY[i][0] % value, value, HAPPY_BIRTHDAY[i][1]);
     delay(400);
   }
   delay(2000);

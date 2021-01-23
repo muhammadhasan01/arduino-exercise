@@ -23,7 +23,7 @@ void setup() {
 
 void loop() {
   for (int i = 0; i < 6; i++) {
-    ourTone(HAPPY_BIRTHDAY[i][0], HAPPY_BIRTHDAY[0][1]);
+    ourTone(HAPPY_BIRTHDAY[i][0], HAPPY_BIRTHDAY[i][1]);
     delay(400);
   }
   delay(2000);

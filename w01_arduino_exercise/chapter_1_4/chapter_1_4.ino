@@ -11,7 +11,8 @@ void loop() {
   // Turn ON and OFF for each LED in order
   for (int i = kLowestLed; i <= kHighestLed; i++) {
     digitalWrite(i, HIGH);
-    delay(100);
+    delay(1000);
     digitalWrite(i, LOW);
+    delay(500);
   }
 }

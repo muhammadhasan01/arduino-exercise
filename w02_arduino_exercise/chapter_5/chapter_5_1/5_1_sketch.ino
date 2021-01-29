@@ -31,8 +31,12 @@ void loop() {
   lcd.setCursor(0, 0);
   lcd.print("Temperature Is:");
   lcd.setCursor(0, 1);
-  lcd.print(value_to_celcius(valor_sensor));
-  lcd.print(" celcius");
+  float cel = value_to_celcius(valor_sensor);
+  lcd.print(cel);
+  lcd.print("C/");
+  float far = celcius_to_farenheit(cel);
+  lcd.print(fer);
+  lcd.print("F");
   delay(10000);
 }
 
@@ -41,4 +45,8 @@ float value_to_celcius(float val) {
   float mili_volt = (voltage) * 1000;
   float celcius = (mili_volt - 500) / 10;
   return celcius;
+}
+
+float celcius_to_farenheit(float cel) {
+  return (cel * 1.8) + 32;
 }
